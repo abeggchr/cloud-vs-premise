@@ -9,6 +9,7 @@
     "vitest": "^0.28.4"
   },
   "dependencies": {
+    "@cloud-carbon-footprint/azure": "^1.1.0",
     "@cloud-carbon-footprint/core": "^0.17.0"
   }
 }
