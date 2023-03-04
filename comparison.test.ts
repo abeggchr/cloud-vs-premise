@@ -7,7 +7,7 @@ import {
   ComputeEstimator,
 } from "@cloud-carbon-footprint/core";
 import { ComputeUsageBuilder } from "@cloud-carbon-footprint/core/src/compute/ComputeUsage";
-import { expect, test } from "vitest";
+import {  test } from "vitest";
 
 /**
  * Estimate the emissions using the CCF tool for 12 VMs with the following spec:
@@ -51,5 +51,5 @@ test("cloud compute example", () => {
 
   const kWh = estimate();
 
-  console.log(`Estimation: ${kWh.toFixed(2)} kWh`);
+  console.log(`Estimation: ${kWh.toFixed(4)} kWh`);
 });
