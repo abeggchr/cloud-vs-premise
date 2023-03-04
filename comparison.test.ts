@@ -23,8 +23,8 @@ test("cloud compute example", () => {
     const computeProcessor = INSTANCE_TYPE_COMPUTE_PROCESSOR_MAPPING["D8s v3"];
 
     const constants: CloudConstants = {
-      maxWatts: AZURE_CLOUD_CONSTANTS.getMinWatts(computeProcessor),
-      minWatts: AZURE_CLOUD_CONSTANTS.getMaxWatts(computeProcessor),
+      maxWatts: AZURE_CLOUD_CONSTANTS.getMaxWatts(computeProcessor),
+      minWatts: AZURE_CLOUD_CONSTANTS.getMinWatts(computeProcessor),
       powerUsageEffectiveness: AZURE_CLOUD_CONSTANTS.getPUE(),
       replicationFactor: 12,
     };
@@ -49,7 +49,7 @@ test("cloud compute example", () => {
    return estimation[0].kilowattHours;
   }
 
-  const cloud_kWh = estimate();
+  const kWh = estimate();
 
-  console.log(`Estimation: ${cloud_kWh.toFixed(2)} kWh`);
+  console.log(`Estimation: ${kWh.toFixed(2)} kWh`);
 });
