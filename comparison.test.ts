@@ -30,7 +30,7 @@ test("cloud compute example", () => {
     };
 
     const builder = new ComputeUsageBuilder("now", constants);
-    builder.addCpuUtilization(0.5); // 50% utilization
+    builder.addCpuUtilization(50); // 50% utilization
     builder.setVCpuHours(1); // running during 1h
     const data = builder.build();
 
