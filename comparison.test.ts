@@ -46,20 +46,10 @@ test("cloud compute example", () => {
       throw Error("unexpected length");
     }
 
-    // The "ConsumptionManagementService" also takes into account:
-    // - storage (ssd, hdd)
-    // - memory
-    // - network
-    // - unknown (?)
-    // - embodied emissions
-    // For this comparison, embodies emissions are out of scope.
-    // The remaining estimates are included with the following factor: 
-    const storageMemoryNetworkFactor = 1.5;
-
-    return storageMemoryNetworkFactor * estimation[0].kilowattHours;
+   return estimation[0].kilowattHours;
   }
 
   const cloud_kWh = estimate();
 
-  console.log(`Estimation: ${cloud_kWh.toFixed(2)}`);
+  console.log(`Estimation: ${cloud_kWh.toFixed(2)} kWh`);
 });
